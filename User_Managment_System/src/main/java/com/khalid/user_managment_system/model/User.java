@@ -37,6 +37,7 @@ public class User {
 
     @NotNull
     @Column(columnDefinition = "varchar(20) not null")
+    @Check(constraints = "role = 'user' or role = 'admin'")
     private String role;
 
     @NotNull
